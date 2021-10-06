@@ -4,17 +4,17 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Adapter
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
-class CustomAdapter(private val context: Context,
+class AdaptorRecyclerView(private val context: Context,
                     private val dataGambar: Array<String>,
                     private val dataJudul: Array<String>,
                     private val dataBuyer: Array<String>) :
-    RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
-
-
+    RecyclerView.Adapter<AdaptorRecyclerView.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
@@ -29,7 +29,6 @@ class CustomAdapter(private val context: Context,
         // Create a new view, which defines the UI of the list item
         val view = LayoutInflater.from(viewGroup.context)
                     .inflate(R.layout.model_rv, viewGroup, false)
-
         return ViewHolder(view)
     }
 
@@ -51,7 +50,4 @@ class CustomAdapter(private val context: Context,
     // Return the size of your dataset (invoked by the layout manager)
     override fun getItemCount() = dataGambar.size
 
-}
-
-class AdapterRecyclerView {
 }

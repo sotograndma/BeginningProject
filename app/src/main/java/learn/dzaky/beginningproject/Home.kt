@@ -20,7 +20,7 @@ class Home : AppCompatActivity() {
         val datasBuyer = arrayOf("3000", "3000")
 
         val rvItem : RecyclerView = findViewById(R.id.rv_item)
-        rvItem.adapter = AdapterRecyclerView(this, datasGambar, datasJudul, datasBuyer)
+        rvItem.adapter = AdaptorRecyclerView(this, datasGambar, datasJudul, datasBuyer)
         rvItem.layoutManager = LinearLayoutManager(this)
         rvItem.setHasFixedSize(true)
 
