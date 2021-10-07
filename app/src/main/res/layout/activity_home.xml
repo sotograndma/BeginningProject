@@ -9,8 +9,10 @@
     tools:context=".Home">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_item"
+        android:id="@+id/rv_chat"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        tools:listitem="@layout/model_rv"
+        tools:ignore="InvalidId" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

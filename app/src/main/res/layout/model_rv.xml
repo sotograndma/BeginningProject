@@ -3,30 +3,44 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-    android:orientation="vertical"
-    >
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:padding="16dp">
 
-    
-    <ImageView
-        android:id="@+id/img"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:src="@drawable/ic_launcher_background"
-        />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_item_msg"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        tools:src="@android:color/darker_gray"/>
 
-    <TextView
-        android:id="@+id/judul"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:layout_marginTop="5dp"/>
-    <TextView
-        android:id="@+id/jml"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/bottom_sheet_behavior"
-        android:layout_marginTop="5dp"/>
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/img_item_msg"
+        android:layout_toRightOf="@+id/img_item_msg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/msg_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="nama"/>
+
+        <TextView
+            android:id="@+id/msg_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="detail"/>
+
+    </LinearLayout>
 
 
 </LinearLayout>
